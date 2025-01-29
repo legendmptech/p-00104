@@ -51,12 +51,12 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-          <nav className="hidden lg:flex space-x-6">
+          <nav className="hidden lg:flex gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="hover:underline"
+                className="text-lg font-medium text-gray-800 hover:bg-primary hover:text-white p-3 transition-all duration-300"
                 onClick={() => setIsSidebarOpen(false)}
               >
                 {link.name}
@@ -74,7 +74,7 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center p-4">
           <Image
-            className=""
+            className="w-32"
             src={"/images/logo/logo.jpg"}
             alt="Logo"
             width={176}
@@ -100,13 +100,13 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <nav className="space-y-4 px-4 mt-10">
+        <nav className="gap-2 px-4 mt-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={toggleSidebar}
-              className="block hover:underline"
+              className="block text-lg font-medium text-gray-800 hover:bg-primary hover:text-white p-3 transition-all duration-300"
             >
               {link.name}
             </Link>

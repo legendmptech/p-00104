@@ -41,6 +41,9 @@ const config: Config = {
       ...defaultTheme.screens,
     },
     extend: {
+      textColor: {
+        DEFAULT: "#000", // Black as the default text color
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -61,15 +64,15 @@ const config: Config = {
           8: "#E5E7EB",
         },
         gray: {
-          DEFAULT: "#000",
-          dark: "#000",
-          1: "#000",
-          2: "#F3F4F6",
-          3: "#E5E7EB",
+          DEFAULT: "#374151", // Dark gray for default
+          dark: "#111827",    // Very dark gray
+          1: "#4B5563",
+          2: "#6B7280",
+          3: "#9CA3AF",
           4: "#D1D5DB",
-          5: "#9CA3AF",
-          6: "#6B7280",
-          7: "#374151",
+          5: "#E5E7EB",
+          6: "#F3F4F6",
+          7: "#FAFAFA",
         },
         green: {
           DEFAULT: "#22AD5C",
