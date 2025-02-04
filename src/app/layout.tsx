@@ -15,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`antialiased text-black`}>{children}</body>
+      <body
+        className={`antialiased text-black`}
+        style={{ backgroundColor: "#F3F4F6" }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

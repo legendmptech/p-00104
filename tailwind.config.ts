@@ -354,9 +354,14 @@ const config: Config = {
         4: "0px 0px 2px rgba(0, 0, 0, 0.2)",
         5: "0px 1px 5px rgba(0, 0, 0, 0.2)",
       },
+
       keyframes: {
         linspin: {
           "100%": { transform: "rotate(360deg)" },
+        },
+        shadowToggle: {
+          '0%, 100%': { boxShadow: '0 4px 6px rgba(0, 0, 0, 0.4)' },
+          '50%': { boxShadow: '0 0 0 rgba(0, 0, 0, 0)' },
         },
         easespin: {
           "12.5%": { transform: "rotate(135deg)" },
@@ -400,6 +405,7 @@ const config: Config = {
         },
       },
       animation: {
+        'shadow-toggle': 'shadowToggle 2s infinite',
         linspin: "linspin 1568.2353ms linear infinite",
         easespin: "easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both",
         "left-spin":

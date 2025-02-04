@@ -15,10 +15,11 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/home" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Our Gallery", href: "/our-gallery" },
     { name: "Contact Us", href: "/contact-us" },
     { name: "About Us", href: "/about-us" },
-    { name: "Innovation", href: "/innovation" },
-    { name: "Office & Labs", href: "/office-labs" },
+    // { name: "Innovation", href: "/innovation" },
+    // { name: "Office & Labs", href: "/office-labs" },
   ];
 
   return (
