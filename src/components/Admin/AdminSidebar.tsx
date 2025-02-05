@@ -198,7 +198,7 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <Image
               width={80}
               height={80}
-              src={"/images/logo/logo.jpg"}
+              src={"/images/logo/logo.jpeg"}
               alt="Logo"
               priority
               className="dark:hidden"
@@ -207,7 +207,7 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <Image
               width={80}
               height={80}
-              src={"/images/logo/logo.jpg"}
+              src={"/images/logo/logo.jpeg"}
               alt="Logo"
               priority
               className="hidden dark:block"

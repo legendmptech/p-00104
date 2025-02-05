@@ -55,7 +55,7 @@ const Header = (props: {
             <Image
               width={80}
               height={80}
-              src={"/images/logo/logo.jpg"}
+              src={"/images/logo/logo.jpeg"}
               alt="Logo"
             />
           </Link>
