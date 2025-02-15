@@ -27,8 +27,8 @@ export default function Navbar() {
       <header className="bg-white shadow-md sticky top-0 left-0 z-40">
         <div className="h-18 lg:px-20 text-black mx-auto flex justify-between items-center px-3 sm:px-4 py-3">
           <h1 className="text-2xl font-bold">
-            <Link href="/" className="text-heading-6">
-              Ayothi Consultancy
+            <Link href="/" className="text-heading-6 flex items-center">
+              <Image alt={"logo"} src={"/images/logo/logo.jpeg"} width={60} height={60}/> Ayothi Consultancy
             </Link>
           </h1>
           <div className="lg:hidden">
@@ -75,11 +75,11 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center p-4">
           <Image
-            className="w-32"
+            className=""
             src={"/images/logo/logo.jpeg"}
             alt="Logo"
-            width={176}
-            height={32}
+            width={120}
+            height={120}
           />
           <button
             onClick={toggleSidebar}
