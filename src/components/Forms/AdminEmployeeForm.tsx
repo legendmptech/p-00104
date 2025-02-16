@@ -27,7 +27,7 @@ export default function AdminClientForm() {
     const emp_phone_no = empPhoneNoInput?.value || "";
 
     try {
-      let response = await postAdminEmployeeForm({
+      const response = await postAdminEmployeeForm({
         emp_name,
         emp_email,
         emp_image,

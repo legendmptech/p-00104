@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/css/style.css";
 import React from "react";
-import AdminHeader from "@/components/Admin/AdminHeader";
 import AdminClientLayout from "@/components/Layouts/AdminClientLayout";
 import AuthProvider from "@/components/Providers/AuthProvider";
 

@@ -11,14 +11,14 @@ import { ValidateUpdateProject } from "@/validate/project.validate";
  * private : true
  * @returns updated project
  */
-export async function PATCH(req: NextRequest, { params }: { params: { project_id: number } }) {
-    let { project_id } = params;
+export async function PATCH(req: NextRequest, { params }: { params: any }) {
+    const { project_id } = params;
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateUpdateProject(body);
 
-        let query = await genDynUpdateQuery(body, DB.PROJECTS_TABLE, { project_id })
-        let values = Object.values(body);
+        const query = await genDynUpdateQuery(body, DB.PROJECTS_TABLE, { project_id })
+        const values = Object.values(body);
 
         await mysqlQuery({
             query,

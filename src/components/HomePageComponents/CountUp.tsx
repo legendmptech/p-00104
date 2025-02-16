@@ -3,7 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-const CountUp = ({ targetValue,label }: { targetValue: number,label:String }) => {
+const CountUp = ({
+  targetValue,
+  label,
+}: {
+  targetValue: number;
+  label: string;
+}) => {
   const [count, setCount] = useState(0);
   const { ref, inView } = useInView({ triggerOnce: true });
 
@@ -26,10 +32,11 @@ const CountUp = ({ targetValue,label }: { targetValue: number,label:String }) =>
   }, [inView, targetValue]);
 
   return (
-    <div ref={ref} className="text-center bg-black border-gray-100 border-2 p-2">
-      <p className="text-4xl">
-        {label+" "+count+"+"}
-      </p>
+    <div
+      ref={ref}
+      className="text-center bg-black border-gray-100 border-2 p-2"
+    >
+      <p className="text-4xl">{label + " " + count + "+"}</p>
     </div>
   );
 };

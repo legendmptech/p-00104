@@ -14,21 +14,21 @@ import bcrypt from 'bcrypt'
  * private : true
  * @returns created user
  */
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateAdminCreateUser(body);
 
-        let users = await mysqlQuery({
+        const users = await mysqlQuery({
             query: `SELECT * FROM ${DB.USERS_TABLE} where user_email=?`,
             values: [body.user_email]
         })
         if (users.length != 0) throw new Error("User already exist")
 
-        let user_password = await bcrypt.hash(body.user_password, 8)
+        const user_password = await bcrypt.hash(body.user_password, 8)
         body.user_password = user_password
-        let query = await genDynInsertQuery(body, DB.USERS_TABLE);
-        let results = await mysqlQuery({
+        const query = await genDynInsertQuery(body, DB.USERS_TABLE);
+        const results = await mysqlQuery({
             query: query,
             values: Object.values(body)
         })
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
  * private : true
  * @returns created project
  */
-export async function GET(req: NextRequest, res: NextResponse): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
     try {
         const query = `SELECT * FROM ${DB.USERS_TABLE}`;
         const users: USERS[] = await mysqlQuery({ query });

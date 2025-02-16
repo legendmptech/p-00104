@@ -24,7 +24,7 @@ export async function postAdminClientForm(data: CLIENTS) {
 }
 export async function getAdminClients() {
     try {
-        let apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/clients`;
+        const apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/clients`;
         const res = await fetch(
             apiURL
         );
@@ -60,7 +60,7 @@ export async function postAdminProjectForm(data: any) {
 }
 export async function getAdminProjects() {
     try {
-        let apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/projects`;
+        const apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/projects`;
         const res = await fetch(
             apiURL
         );
@@ -96,7 +96,7 @@ export async function postAdminEmployeeForm(data: EMPLOYEES) {
 }
 export async function getAdminEmployees() {
     try {
-        let apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/employees`;
+        const apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/employees`;
         const res = await fetch(
             apiURL
         );
@@ -128,7 +128,7 @@ export async function postAdminUserForm(data: USERS) {
 }
 export async function getUsersInAdminPage() {
     try {
-        let apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/users`;
+        const apiURL = `${process.env.NEXT_PUBLIC_URL}/api/admin/users`;
         const res = await fetch(
             apiURL
         );

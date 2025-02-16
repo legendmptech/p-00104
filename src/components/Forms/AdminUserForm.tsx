@@ -22,7 +22,7 @@ export default function AdminClientForm() {
     const user_password = userPasswordInput?.value || "";
 
     try {
-      let response = await postAdminUserForm({
+      const response = await postAdminUserForm({
         user_password,
         user_email,
         user_name,

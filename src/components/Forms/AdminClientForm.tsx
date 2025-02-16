@@ -19,7 +19,7 @@ export default function AdminClientForm() {
     const client_image = clientImageInput?.value || "";
 
     try {
-      let response = await postAdminClientForm({
+      const response = await postAdminClientForm({
         client_image,
         client_place,
         client_name,

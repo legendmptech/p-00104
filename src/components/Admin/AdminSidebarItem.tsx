@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import AdminSidebarDropDown from "@/components/Admin/AdminSidebarDropdown";
 
-const SidebarItem = ({ item, pageName, setPageName, setSidebarOpen }: any) => {
+const SidebarItem = ({ item, pageName, setPageName }: any) => {
   const handleClick = () => {
     const updatedPageName =
       pageName !== item.label.toLowerCase() ? item.label.toLowerCase() : "";

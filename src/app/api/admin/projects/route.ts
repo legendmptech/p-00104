@@ -13,19 +13,19 @@ import { PROJECTS } from "@/types/projects";
  * private : true
  * @returns created project
  */
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateCreateProject(body);
 
-        let projects = await mysqlQuery({
+        const projects = await mysqlQuery({
             query: `SELECT * FROM ${DB.PROJECTS_TABLE} where LOWER(project_name)=LOWER(?)`,
             values: [body?.project_name]
         })
         if (projects.length != 0) throw new Error("Project Already Exist")
 
-        let query = await genDynInsertQuery(body, DB.PROJECTS_TABLE);
-        let values = Object.values(body);
+        const query = await genDynInsertQuery(body, DB.PROJECTS_TABLE);
+        const values = Object.values(body);
 
         const results: any = await mysqlQuery({
             query,
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
  * method : GET
  * private : true
  */
-export async function GET(req: NextRequest, res: NextResponse): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
     try {
         const query = `
         SELECT * 

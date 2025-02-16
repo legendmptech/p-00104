@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function SigninWithPassword() {
-  let router = useRouter();
+  const router = useRouter();
   async function handleSubmit(): Promise<void> {
     const emailInput = document.getElementById(
       "user_email"
@@ -17,7 +17,7 @@ export default function SigninWithPassword() {
     const user_password = passwordInput?.value || "";
 
     try {
-      let response = await signIn("credentials", {
+      const response = await signIn("credentials", {
         redirect: false,
         user_email,
         user_password,

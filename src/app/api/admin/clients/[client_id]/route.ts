@@ -11,14 +11,14 @@ import { ValidateUpdateClient } from "@/validate/client.validate";
  * private : true
  * @returns update client
  */
-export async function PATCH(req: NextRequest, { params }: { params: { client_id: number } }) {
-    let { client_id } = await params;
+export async function PATCH(req: NextRequest, { params }: { params: any }) {
+    const { client_id } = params;
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateUpdateClient(body);
 
-        let query = await genDynUpdateQuery(body, DB.CLIENTS_TABLE, { client_id })
-        let values = [...Object.values(body), client_id];
+        const query = await genDynUpdateQuery(body, DB.CLIENTS_TABLE, { client_id })
+        const values = [...Object.values(body), client_id];
 
         await mysqlQuery({
             query,

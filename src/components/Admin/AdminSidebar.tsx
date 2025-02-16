@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import AdminSidebarItem from "@/components/Admin/AdminSidebarItem";
@@ -179,8 +178,6 @@ const menuGroups = [
 ];
 
 const AdminSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
-  const pathname = usePathname();
-
   const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
 
   return (

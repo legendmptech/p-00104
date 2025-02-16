@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { genDynInsertQuery, genDynUpdateQuery, mysqlQuery } from "@/lib/db";
+import { genDynInsertQuery, mysqlQuery } from "@/lib/db";
 import { DB } from "@/types/database"
-import { ValidateCreateClient, ValidateUpdateClient } from "@/validate/client.validate";
+import { ValidateCreateClient } from "@/validate/client.validate";
 import { CLIENTS } from "@/types/clients";
 
 /**
@@ -12,7 +12,7 @@ import { CLIENTS } from "@/types/clients";
  * private : true
  * @returns created project
  */
-export async function GET(req: NextRequest, res: NextResponse): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
     try {
         const query = `
         SELECT * 
@@ -45,18 +45,18 @@ export async function GET(req: NextRequest, res: NextResponse): Promise<NextResp
  * private : true
  * @returns created client
  */
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateCreateClient(body);
 
-        let clients = await mysqlQuery({
+        const clients = await mysqlQuery({
             query: `SELECT * FROM ${DB.CLIENTS_TABLE} where LOWER(client_name)=LOWER(?)`,
             values: [body?.client_name]
         })
         if(clients.length!=0)throw new Error("Client Already Exist")
-        let query = await genDynInsertQuery(body, DB.CLIENTS_TABLE);
-        let values = Object.values(body);
+        const query = await genDynInsertQuery(body, DB.CLIENTS_TABLE);
+        const values = Object.values(body);
 
         const results: any = await mysqlQuery({
             query,

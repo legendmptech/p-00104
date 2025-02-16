@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { genDynInsertQuery, mysqlQuery } from "@/lib/db";
 import { DB } from "@/types/database"
 import { ValidateCreateEmployee } from "@/validate/employee.validate";
-import { USERS } from "@/types/users";
-import bcrypt from 'bcrypt'
 import { EMPLOYEES } from "@/types/employees";
 
 
@@ -15,19 +13,19 @@ import { EMPLOYEES } from "@/types/employees";
  * private : true
  * @returns created employee
  */
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
     try {
-        let body = await req.json();
+        const body = await req.json();
         await ValidateCreateEmployee(body);
 
-        let employees = await mysqlQuery({
+        const employees = await mysqlQuery({
             query: `SELECT * FROM ${DB.EMPLOYEES_TABLE} where emp_email=?`,
             values: [body.emp_email]
         })
         if (employees.length != 0) throw new Error("Employee already exist")
 
-        let query = await genDynInsertQuery(body, DB.EMPLOYEES_TABLE);
-        let results = await mysqlQuery({
+        const query = await genDynInsertQuery(body, DB.EMPLOYEES_TABLE);
+        const results = await mysqlQuery({
             query: query,
             values: Object.values(body)
         })
@@ -50,7 +48,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
  * private : true
  * @returns created project
  */
-export async function GET(req: NextRequest, res: NextResponse): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
     try {
         const query = `SELECT * FROM ${DB.EMPLOYEES_TABLE}`;
         const employees: EMPLOYEES[] = await mysqlQuery({ query });

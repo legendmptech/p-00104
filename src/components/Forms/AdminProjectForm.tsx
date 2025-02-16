@@ -27,7 +27,7 @@ export default function AdminProjectForm() {
     fetchClients();
   }, []);
 
-  async function handleSubmit(event: React.FormEvent): Promise<void> {
+  async function handleSubmit(): Promise<void> {
 
     const projectNameInput = document.getElementById(
       "project_name"
@@ -64,7 +64,7 @@ export default function AdminProjectForm() {
       return;
     }
     try {
-      let data: PROJECTS = {
+      const data: PROJECTS = {
         project_name,
         project_desc,
         project_type,

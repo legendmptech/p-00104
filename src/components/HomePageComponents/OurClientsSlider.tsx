@@ -20,7 +20,7 @@ export default function OurClientsSlider() {
     const slider = sliderRef.current;
     if (!slider) return; // Early return if slider is null
 
-    let scrollSpeed = 1; // Adjust this to control the speed of the train-like movement
+    const scrollSpeed = 1; // Adjust this to control the speed of the train-like movement
 
     const moveSlider = () => {
       // Scroll the slider to the left by 1px

@@ -12,24 +12,24 @@ import bcrypt from 'bcrypt'
  * private : true
  * @returns update users
  */
-export async function PATCH(req: NextRequest, { params }: { params: { user_email: string } }) {
-    let { user_email } = await params;
+export async function PATCH(req: NextRequest, { params }: { params: any }) {
+    const { user_email } = await params;
     try {
-        let users = await mysqlQuery({
+        const users = await mysqlQuery({
             query: `SELECT * FROM ${DB.USERS_TABLE} where user_email=?`,
             values: [user_email]
         })
         if (users.length == 0) throw new Error("No User Exist with the Email " + user_email)
-        let body = await req.json();
+        const body = await req.json();
         await ValidateAdminUpdateUser(body);
 
         if (body.user_password) {
-            let user_password = await bcrypt.hash(body.user_password, 8)
+            const user_password = await bcrypt.hash(body.user_password, 8)
             body.user_password = user_password
         }
 
-        let query = await genDynUpdateQuery(body, DB.USERS_TABLE, { user_email })
-        let values = [...Object.values(body), user_email];
+        const query = await genDynUpdateQuery(body, DB.USERS_TABLE, { user_email })
+        const values = [...Object.values(body), user_email];
 
         await mysqlQuery({
             query,

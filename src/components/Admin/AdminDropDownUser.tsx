@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import ClickOutside from "@/components/ClickOutside";
 import { signOut, useSession } from "next-auth/react";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  let { data, status }: { data: any; status: any } = useSession();
+  const { data }: { data: any } = useSession();
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <Link

@@ -1,6 +1,6 @@
 import joi from "joi";
 
-let strongPasswordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+const strongPasswordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 export const ValidateSignUp = (authData: any) => {
     const Schema = joi.object({
         user_name: joi.string().max(100).required(),

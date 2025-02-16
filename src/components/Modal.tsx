@@ -5,7 +5,6 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import { BsPlus } from "react-icons/bs";
 import React, { Fragment, useState } from "react";
 
 const Modal = ({
@@ -17,7 +16,7 @@ const Modal = ({
   modalTitle: string;
   children: React.ReactNode;
 }) => {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
