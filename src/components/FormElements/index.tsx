@@ -1,5 +1,4 @@
 "use client";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import CheckboxFive from "@/components/FormElements/Checkboxes/CheckboxFive";
 import CheckboxFour from "@/components/FormElements/Checkboxes/CheckboxFour";
 import CheckboxOne from "@/components/FormElements/Checkboxes/CheckboxOne";
@@ -11,13 +10,10 @@ import SwitcherThree from "@/components/FormElements/Switchers/SwitcherThree";
 import SwitcherTwo from "@/components/FormElements/Switchers/SwitcherTwo";
 import DatePickerTwo from "@/components/FormElements/DatePicker/DatePickerTwo";
 import DatePickerOne from "@/components/FormElements/DatePicker/DatePickerOne";
-import MultiSelect from "@/components/FormElements/MultiSelect";
-import SelectGroupTwo from "@/components/FormElements/SelectGroup/SelectGroupTwo";
 
 const FormElements = () => {
   return (
     <>
-      <Breadcrumb pageName="FormElements" />
 
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         <div className="flex flex-col gap-9">
@@ -191,10 +187,6 @@ const FormElements = () => {
               <h3 className="font-medium text-dark dark:text-white">
                 Select input
               </h3>
-            </div>
-            <div className="flex flex-col gap-5.5 p-6.5">
-              <SelectGroupTwo />
-              <MultiSelect id="multiSelect" />
             </div>
           </div>
         </div>

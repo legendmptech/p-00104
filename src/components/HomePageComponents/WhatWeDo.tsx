@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhatWeDO() {
     return (
         <section className="w-full py-12 bg-gray-100 px-5 text-black">
@@ -23,7 +25,7 @@ export default function WhatWeDO() {
                         </ul>
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSzUCbLozCxvUDFO65dQk2Gb8d7mGZuw_ML6BwhDrrIjRmYDu0pzZQrDmEmjnzWViHCDC-FY440QoJTQrW59C8xkFP6dwWawQUgVMynLv-X8ggdR-bmb042vbi4zFNUb4R2RkSAKfkwi7K4jGPycZsTx5D5Nl5YL3uz846n1rASXoi8KlrZWEqke85t2mL/w640-h427/dpr.jpg" alt="Feasibility Study" className="w-full h-auto rounded-lg shadow-md"/>
+                        <Image width={800} height={800} src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSzUCbLozCxvUDFO65dQk2Gb8d7mGZuw_ML6BwhDrrIjRmYDu0pzZQrDmEmjnzWViHCDC-FY440QoJTQrW59C8xkFP6dwWawQUgVMynLv-X8ggdR-bmb042vbi4zFNUb4R2RkSAKfkwi7K4jGPycZsTx5D5Nl5YL3uz846n1rASXoi8KlrZWEqke85t2mL/w640-h427/dpr.jpg" alt="Feasibility Study" className="w-full h-auto rounded-lg shadow-md"/>
                     </div>
                 </div>
             </div>
