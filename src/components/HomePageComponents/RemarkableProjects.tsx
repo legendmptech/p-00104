@@ -20,7 +20,7 @@ const RemarkableProjects = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4">CONSTRUCTION OF CONVENTIONAL CENTER IN SIVAKASI CORPPORATION</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4">CONSTRUCTION OF CONVENTIONAL CENTER IN SIVAKASI CORPORATION</h3>
               <ul className="text-lg sm:text-xl">
                 <li><b>Year : </b>2024</li>
                 <li><b>Estimated Cost : </b>1500 lakhs</li>
@@ -40,7 +40,7 @@ const RemarkableProjects = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4">CONSTRUCTION OF NEW FISH MARKET IN PATTINAMPAKKAM IN CHENNAI CORPPORATION</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4">CONSTRUCTION OF NEW FISH MARKET IN PATTINAMPAKKAM IN CHENNAI CORPORATION</h3>
               <ul className="text-lg sm:text-xl">
                 <li><b>Year : </b>2024</li>
                 <li><b>Estimated Cost : </b>1035 lakhs</li>

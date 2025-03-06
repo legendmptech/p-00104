@@ -16,7 +16,7 @@ const page = () => {
         {/* Layer 2: Scrollable Content */}
         <div className="w-full">
           <section className="h-screen flex flex-col items-center justify-center text-white px-4">
-            <h1 className="text-5xl sm:text-7xl font-bold w-full p-3">
+            <h1 className="text-center text-5xl sm:text-7xl font-bold w-full p-3">
               Ayothi <span>Consultancy</span>
             </h1>
             <p className="text-center max-w-3xl text-xl sm:text-2xl mt-6">

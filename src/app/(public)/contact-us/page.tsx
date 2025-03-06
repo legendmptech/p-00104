@@ -1,33 +1,10 @@
-// pages/contact.tsx
-"use client";
-import LoadingComponent from "@/components/LoadingComponent";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
 
 const Contact: NextPage = () => {
-  const [name, setName] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    console.log("Form submitted:", { name, email, message });
-
-    setName("");
-    setEmail("");
-    setMessage("");
-
-    alert("Message sent successfully!");
-    setIsLoading(false);
-  };
-
   return (
     <div className="w-full h-full">
-      <LoadingComponent isLoading={isLoading} />
       <Head>
         <title>Contact Us</title>
         <meta name="description" content="Contact Arunam Sand" />{" "}
@@ -82,7 +59,9 @@ const Contact: NextPage = () => {
                 Send us a message
               </h3>
               <form
-                onSubmit={handleSubmit}
+                action="https://formsubmit.co/6b8f81a77092422a5b1c7fd9b85d5598"
+                target="_blank"
+                method="POST"
                 className="mt-4 space-y-4 flex flex-col gap-4"
               >
                 <div>
@@ -95,8 +74,7 @@ const Contact: NextPage = () => {
                   <input
                     type="text"
                     id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    name="name"
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm border-2 p-3 focus:outline-dashed focus:outline-gray-2 focus:outline-1"
                     required
                   />
@@ -111,8 +89,7 @@ const Contact: NextPage = () => {
                   <input
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    name="email"
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm border-2 p-3 focus:outline-dashed focus:outline-gray-2 focus:outline-1"
                     required
                   />
@@ -126,8 +103,7 @@ const Contact: NextPage = () => {
                   </label>
                   <textarea
                     id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    name="message"
                     rows={4}
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm border-2 p-3 focus:outline-dashed focus:outline-gray-2 focus:outline-1"
                     required

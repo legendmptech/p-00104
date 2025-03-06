@@ -15,7 +15,7 @@ export const projectData = [
     },
     {
         no: 2,
-        name: "CONSTRUCTION OF NEW FISH MARKET IN PATTINAMPAKKAM IN CHENNAI CORPPORATION",
+        name: "CONSTRUCTION OF NEW FISH MARKET IN PATTINAMPAKKAM IN CHENNAI CORPORATION",
         est_cost: 1035,
         year: 2024,
         images: [
@@ -29,7 +29,7 @@ export const projectData = [
     },
     {
         no: 3,
-        name: "CONSTRUCTION OF CONVENTIONAL CENTER IN SIVAKASI CORPPORATION",
+        name: "CONSTRUCTION OF CONVENTIONAL CENTER IN SIVAKASI CORPORATION",
         est_cost: 1500,
         year: 2024,
         images: [

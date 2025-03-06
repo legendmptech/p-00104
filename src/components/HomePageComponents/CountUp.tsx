@@ -34,7 +34,7 @@ const CountUp = ({
   return (
     <div
       ref={ref}
-      className="text-center bg-gray-1 border-gray-2 border-2 p-2 rounded-md"
+      className="text-center text-black bg-gray-200 border-gray border-2 p-2 rounded-md"
     >
       <p className="text-4xl">{label + " " + count + "+"}</p>
     </div>
