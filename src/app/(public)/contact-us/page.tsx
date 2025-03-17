@@ -7,7 +7,7 @@ const Contact: NextPage = () => {
     <div className="w-full h-full">
       <Head>
         <title>Contact Us</title>
-        <meta name="description" content="Contact Arunam Sand" />{" "}
+        <meta name="description" content="Contact Ayothi Consultancy" />{" "}
         {/* Update description */}
       </Head>
 
@@ -59,7 +59,7 @@ const Contact: NextPage = () => {
                 Send us a message
               </h3>
               <form
-                action="https://formsubmit.co/6b8f81a77092422a5b1c7fd9b85d5598"
+                action="https://formsubmit.co/ayothyconsultancy@gmail.com"
                 target="_blank"
                 method="POST"
                 className="mt-4 space-y-4 flex flex-col gap-4"
