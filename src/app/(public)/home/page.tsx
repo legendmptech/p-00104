@@ -1,7 +1,7 @@
 import HomeBgImage from "@/components/HomePageComponents/HomeBgImg";
-import OurClientsSlider from "@/components/HomePageComponents/OurClientsSlider";
+// import OurClientsSlider from "@/components/HomePageComponents/OurClientsSlider";
 import OurServices from "@/components/HomePageComponents/OurServices";
-import ProjectsInMap from "@/components/HomePageComponents/ProjectsInMap";
+// import ProjectsInMap from "@/components/HomePageComponents/ProjectsInMap";
 import RemarkableProjects from "@/components/HomePageComponents/RemarkableProjects";
 import VisionMission from "@/components/HomePageComponents/VisionMission";
 import WhatWeDO from "@/components/HomePageComponents/WhatWeDo";
