@@ -26,13 +26,13 @@ const page = () => {
               infrastructure of tomorrow.
             </p>
             <div className="flex flex-col sm:flex-row mt-5 gap-5">
-            <CountUp targetValue={40} label={"Projects"}/>
-            <CountUp targetValue={20} label={"Clients"}/>
+              <CountUp targetValue={20} label={"Projects"} />
+              <CountUp targetValue={3} label={"Clients"} />
             </div>
           </section>
-          <section className="w-full bg-white">
+          {/* <section className="w-full bg-white">
             <ProjectsInMap />
-          </section>
+          </section> */}
           {/* Section 2: White Background */}
           <section className="w-full bg-white">
             <OurServices />
@@ -42,7 +42,7 @@ const page = () => {
           {/* Section 3: Mission */}
           <VisionMission />
           {/* Section 4: Our Clients */}
-          <OurClientsSlider />
+          {/* <OurClientsSlider /> */}
         </div>
       </div>
     </div>

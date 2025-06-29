@@ -8,7 +8,7 @@ export default function HomeBgImg() {
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center top-0 left-0"
         style={{
-          backgroundImage: `url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqlsgszjU6vCRn3N-rSlBrpRiWpJhreN6TPp2RiHK_hpBDheTTloNJNVsirSNqFa5lMNS3QoCpKmiFfsQVuTSmDvMXZZXnlRcSROKv6VcRJVVTpY6ejr8uGontDflRJwv_WiuceGiL_8ObKcoaq86HFFhBQB1ZZ4Uosq6smQ42E5aW_UWlZJzFWWYRbEam/s16000/bg-construction.png')`,
+          backgroundImage: `url('https://blogger.googleusercontent.com/img/a/AVvXsEjkIoFInwtOAxHF0aUobSuvpC3qHfJ4mVuIGEtHjMd17WAd_x9BSCR3L6orE2U6l6qHb181LvZHCGyJ2nNuEYg7eYsYmW3un90Q-cdnmFZmSZ5QtrZ-EMTcdV_etYEEBq-kRlteXhld6IFdxhRnO3uQv1VrsDfAeMaTF9EZhOnaroJUjHP0zonroUPW4VSv')`,
         }}
       >
         {/* Black Overlay */}
